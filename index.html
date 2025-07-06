@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MuttonMart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/styles.css">
+
+
+
+</head>
+
+<body>
+    <!-- Top Address Bar -->
+    <div class="top-bar d-flex justify-content-between align-items-center">
+        <div>
+            <i class="bi bi-geo-alt-fill"></i>
+            Fresh Cuts Mutton Center Shop No. 27, Ground Floor, Shree Market Complex,
+            MG Road, Near City Bus Stop, Shivaji Nagar, Nagpur, Maharashtra - 411005
+        </div>
+        <div>
+            <i class="bi bi-envelope-fill"></i>
+            Email@Example.com
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top border-bottom shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">MuttonMart</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="FAQ.html">FAQs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <i class="bi bi-person" style="font-size: 18px;" id="loginBtn"></i>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <i class="bi bi-cart" style="font-size: 18px;"></i>
+                        <span class="ms-1" style="color: #d71919; font-weight: 600;">0</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Slider Text -->
+    <div class="slider-text">
+        <span>We currently deliver fresh, high-quality meat products exclusively in Nagpur
+            and surrounding areas. Place your order today and enjoy fast, hygienic
+            doorstep delivery right away.</span>
+    </div>
+
+
+
+
+    <!-- hero section start here  -->
+    <section class="hero-slider">
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="position-relative">
+                        <img src="assets/images/slider3.png" class="d-block slider-img" alt="Slide 3" />
+                        <div class="dark-layer"></div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="position-relative">
+                        <img src="assets/images/slider2.png" class="d-block slider-img" alt="Slide 2" />
+                        <div class="dark-layer"></div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="position-relative">
+                        <img src="assets/images/slider3.png" class="d-block slider-img" alt="Slide 3" />
+                        <div class="dark-layer"></div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev custom-control" type="button" data-bs-target="#heroCarousel"
+                data-bs-slide="prev">
+                <span class="bi bi-chevron-left"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next custom-control" type="button" data-bs-target="#heroCarousel"
+                data-bs-slide="next">
+                <span class="bi bi-chevron-right"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- hero section end here  -->
+
+
+
+    <!-- Our Products Section -->
+    <section class="products py-5">
+        <div class="container">
+            <!-- Title + Tabs -->
+            <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+                <h2 class="mb-0">Our Products</h2>
+                <div>
+                    <button class="btn btn-light filter-btn active" data-filter="all">All Products</button>
+                    <button class="btn btn-light filter-btn" data-filter="mundi">Mutton Mundi</button>
+                    <button class="btn btn-light filter-btn" data-filter="sundari">Mutton Sundari</button>
+                    <button class="btn btn-light filter-btn" data-filter="paya">Mutton Paya</button>
+                    <button class="btn btn-light filter-btn" data-filter="liver">Mutton Liver</button>
+                </div>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="row g-4" id="productList">
+
+                <!-- 12 sample products with different categories -->
+
+                <!-- Product 1 -->
+                <div class="col-md-3 product-item" data-category="all mundi">
+                    <div class="card shadow-sm rounded-4 overflow-hidden product-card">
+                        <span
+                            class="position-absolute top-0 start-0 m-2 bg-danger text-white px-2 rounded">Mutton</span>
+                        <img src="assets/images/img1.png" class="card-img-top" alt="Mutton Head Meat">
+                        <div class="card-body text-center">
+                            <h6 class="fw-bold">Mutton Head Meat</h6>
+                            <p class="small text-muted mb-1">1kg | 4 pieces | serves 4</p>
+                            <p>
+                                <s>₹329</s> <span class="fw-bold text-success">₹279.65</span>
+                                <span class="badge bg-success ms-1">15% OFF</span>
+                            </p>
+                            <div class="d-flex justify-content-center mb-2">
+                                <button class="btn btn-outline-secondary btn-sm minus-btn">-</button>
+                                <span class="mx-2 quantity">1</span>
+                                <button class="btn btn-outline-secondary btn-sm plus-btn">+</button>
+                            </div>
+                            <button class="btn btn-outline-danger w-100 add-to-cart">
+                                <i class="bi bi-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="col-md-3 product-item" data-category="all sundari">
+                    <div class="card shadow-sm rounded-4 overflow-hidden product-card">
+                        <span
+                            class="position-absolute top-0 start-0 m-2 bg-danger text-white px-2 rounded">Mutton</span>
+                        <img src="assets/images/img2.png" class="card-img-top" alt="Mutton Brain">
+                        <div class="card-body text-center">
+                            <h6 class="fw-bold">Mutton Brain</h6>
+                            <p class="small text-muted mb-1">1kg | 3 pieces | serves 4</p>
+                            <p>
+                                <s>₹305</s> <span class="fw-bold text-success">₹259.25</span>
+                                <span class="badge bg-success ms-1">15% OFF</span>
+                            </p>
+                            <div class="d-flex justify-content-center mb-2">
+                                <button class="btn btn-outline-secondary btn-sm minus-btn">-</button>
+                                <span class="mx-2 quantity">1</span>
+                                <button class="btn btn-outline-secondary btn-sm plus-btn">+</button>
+                            </div>
+                            <button class="btn btn-outline-danger w-100 add-to-cart">
+                                <i class="bi bi-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="col-md-3 product-item" data-category="all mundi">
+                    <div class="card shadow-sm rounded-4 overflow-hidden product-card">
+                        <span
+                            class="position-absolute top-0 start-0 m-2 bg-danger text-white px-2 rounded">Mutton</span>
+                        <img src="assets/images/img3.png" class="card-img-top" alt="Mutton Mundi">
+                        <div class="card-body text-center">
+                            <h6 class="fw-bold">Mutton Mundi with Bheja</h6>
+                            <p class="small text-muted mb-1">2kg | 5 pieces | serves 4</p>
+                            <p>
+                                <s>₹450</s> <span class="fw-bold text-success">₹382.5</span>
+                                <span class="badge bg-success ms-1">15% OFF</span>
+                            </p>
+                            <div class="d-flex justify-content-center mb-2">
+                                <button class="btn btn-outline-secondary btn-sm minus-btn">-</button>
+                                <span class="mx-2 quantity">1</span>
+                                <button class="btn btn-outline-secondary btn-sm plus-btn">+</button>
+                            </div>
+                            <button class="btn btn-outline-danger w-100 add-to-cart">
+                                <i class="bi bi-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="col-md-3 product-item" data-category="all liver">
+                    <div class="card shadow-sm rounded-4 overflow-hidden product-card">
+                        <span
+                            class="position-absolute top-0 start-0 m-2 bg-danger text-white px-2 rounded">Mutton</span>
+                        <img src="assets/images/img4.png" class="card-img-top" alt="Mutton Liver">
+                        <div class="card-body text-center">
+                            <h6 class="fw-bold">Mutton Liver</h6>
+                            <p class="small text-muted mb-1">1kg | 4 pieces | serves 4</p>
+                            <p>
+                                <s>₹310</s> <span class="fw-bold text-success">₹260</span>
+                                <span class="badge bg-success ms-1">15% OFF</span>
+                            </p>
+                            <div class="d-flex justify-content-center mb-2">
+                                <button class="btn btn-outline-secondary btn-sm minus-btn">-</button>
+                                <span class="mx-2 quantity">1</span>
+                                <button class="btn btn-outline-secondary btn-sm plus-btn">+</button>
+                            </div>
+                            <button class="btn btn-outline-danger w-100 add-to-cart">
+                                <i class="bi bi-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="col-md-3 product-item" data-category="all paya">
+                    <div class="card shadow-sm rounded-4 overflow-hidden product-card">
+                        <span
+                            class="position-absolute top-0 start-0 m-2 bg-danger text-white px-2 rounded">Mutton</span>
+                        <img src="assets/images/img5.png" class="card-img-top" alt="Mutton Paya">
+                        <div class="card-body text-center">
+                            <h6 class="fw-bold">Mutton Paya</h6>
+                            <p class="small text-muted mb-1">1kg | 4 pieces | serves 4</p>
+                            <p>
+                                <s>₹275</s> <span class="fw-bold text-success">₹230</span>
+                                <span class="badge bg-success ms-1">15% OFF</span>
+                            </p>
+                            <div class="d-flex justify-content-center mb-2">
+                                <button class="btn btn-outline-secondary btn-sm minus-btn">-</button>
+                                <span class="mx-2 quantity">1</span>
+                                <button class="btn btn-outline-secondary btn-sm plus-btn">+</button>
+                            </div>
+                            <button class="btn btn-outline-danger w-100 add-to-cart">
+                                <i class="bi bi-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="col-md-3 product-item" data-category="all sundari">
+                    <div class="card shadow-sm rounded-4 overflow-hidden product-card">
+                        <span
+                            class="position-absolute top-0 start-0 m-2 bg-danger text-white px-2 rounded">Mutton</span>
+                        <img src="assets/images/img6.png" class="card-img-top" alt="Mutton Sundari">
+                        <div class="card-body text-center">
+                            <h6 class="fw-bold">Mutton Sundari</h6>
+                            <p class="small text-muted mb-1">2kg | 6 pieces | serves 4</p>
+                            <p>
+                                <s>₹390</s> <span class="fw-bold text-success">₹331</span>
+                                <span class="badge bg-success ms-1">15% OFF</span>
+                            </p>
+                            <div class="d-flex justify-content-center mb-2">
+                                <button class="btn btn-outline-secondary btn-sm minus-btn">-</button>
+                                <span class="mx-2 quantity">1</span>
+                                <button class="btn btn-outline-secondary btn-sm plus-btn">+</button>
+                            </div>
+                            <button class="btn btn-outline-danger w-100 add-to-cart">
+                                <i class="bi bi-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="col-md-3 product-item" data-category="all liver">
+                    <div class="card shadow-sm rounded-4 overflow-hidden product-card">
+                        <span
+                            class="position-absolute top-0 start-0 m-2 bg-danger text-white px-2 rounded">Mutton</span>
+                        <img src="assets/images/img7.png" class="card-img-top" alt="Mutton Boil">
+                        <div class="card-body text-center">
+                            <h6 class="fw-bold">Mutton Boil</h6>
+                            <p class="small text-muted mb-1">1kg | 5 pieces | serves 4</p>
+                            <p>
+                                <s>₹320</s> <span class="fw-bold text-success">₹272</span>
+                                <span class="badge bg-success ms-1">15% OFF</span>
+                            </p>
+                            <div class="d-flex justify-content-center mb-2">
+                                <button class="btn btn-outline-secondary btn-sm minus-btn">-</button>
+                                <span class="mx-2 quantity">1</span>
+                                <button class="btn btn-outline-secondary btn-sm plus-btn">+</button>
+                            </div>
+                            <button class="btn btn-outline-danger w-100 add-to-cart">
+                                <i class="bi bi-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 product-item" data-category="all liver">
+                    <div class="card shadow-sm rounded-4 overflow-hidden product-card">
+                        <span
+                            class="position-absolute top-0 start-0 m-2 bg-danger text-white px-2 rounded">Mutton</span>
+                        <img src="assets/images/img8.png" class="card-img-top" alt="Mutton Boil">
+                        <div class="card-body text-center">
+                            <h6 class="fw-bold">Mutton Boil</h6>
+                            <p class="small text-muted mb-1">1kg | 5 pieces | serves 4</p>
+                            <p>
+                                <s>₹320</s> <span class="fw-bold text-success">₹272</span>
+                                <span class="badge bg-success ms-1">15% OFF</span>
+                            </p>
+                            <div class="d-flex justify-content-center mb-2">
+                                <button class="btn btn-outline-secondary btn-sm minus-btn">-</button>
+                                <span class="mx-2 quantity">1</span>
+                                <button class="btn btn-outline-secondary btn-sm plus-btn">+</button>
+                            </div>
+                            <button class="btn btn-outline-danger w-100 add-to-cart">
+                                <i class="bi bi-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 product-item" data-category="all liver">
+                    <div class="card shadow-sm rounded-4 overflow-hidden product-card">
+                        <span
+                            class="position-absolute top-0 start-0 m-2 bg-danger text-white px-2 rounded">Mutton</span>
+                        <img src="assets/images/img9.png" class="card-img-top" alt="Mutton Boil">
+                        <div class="card-body text-center">
+                            <h6 class="fw-bold">Mutton Boil</h6>
+                            <p class="small text-muted mb-1">1kg | 5 pieces | serves 4</p>
+                            <p>
+                                <s>₹320</s> <span class="fw-bold text-success">₹272</span>
+                                <span class="badge bg-success ms-1">15% OFF</span>
+                            </p>
+                            <div class="d-flex justify-content-center mb-2">
+                                <button class="btn btn-outline-secondary btn-sm minus-btn">-</button>
+                                <span class="mx-2 quantity">1</span>
+                                <button class="btn btn-outline-secondary btn-sm plus-btn">+</button>
+                            </div>
+                            <button class="btn btn-outline-danger w-100 add-to-cart">
+                                <i class="bi bi-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 product-item" data-category="all liver">
+                    <div class="card shadow-sm rounded-4 overflow-hidden product-card">
+                        <span
+                            class="position-absolute top-0 start-0 m-2 bg-danger text-white px-2 rounded">Mutton</span>
+                        <img src="assets/images/img10.png" class="card-img-top" alt="Mutton Boil">
+                        <div class="card-body text-center">
+                            <h6 class="fw-bold">Mutton Boil</h6>
+                            <p class="small text-muted mb-1">1kg | 5 pieces | serves 4</p>
+                            <p>
+                                <s>₹320</s> <span class="fw-bold text-success">₹272</span>
+                                <span class="badge bg-success ms-1">15% OFF</span>
+                            </p>
+                            <div class="d-flex justify-content-center mb-2">
+                                <button class="btn btn-outline-secondary btn-sm minus-btn">-</button>
+                                <span class="mx-2 quantity">1</span>
+                                <button class="btn btn-outline-secondary btn-sm plus-btn">+</button>
+                            </div>
+                            <button class="btn btn-outline-danger w-100 add-to-cart">
+                                <i class="bi bi-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 product-item" data-category="all liver">
+                    <div class="card shadow-sm rounded-4 overflow-hidden product-card">
+                        <span
+                            class="position-absolute top-0 start-0 m-2 bg-danger text-white px-2 rounded">Mutton</span>
+                        <img src="assets/images/img11.png" class="card-img-top" alt="Mutton Boil">
+                        <div class="card-body text-center">
+                            <h6 class="fw-bold">Mutton Boil</h6>
+                            <p class="small text-muted mb-1">1kg | 5 pieces | serves 4</p>
+                            <p>
+                                <s>₹320</s> <span class="fw-bold text-success">₹272</span>
+                                <span class="badge bg-success ms-1">15% OFF</span>
+                            </p>
+                            <div class="d-flex justify-content-center mb-2">
+                                <button class="btn btn-outline-secondary btn-sm minus-btn">-</button>
+                                <span class="mx-2 quantity">1</span>
+                                <button class="btn btn-outline-secondary btn-sm plus-btn">+</button>
+                            </div>
+                            <button class="btn btn-outline-danger w-100 add-to-cart">
+                                <i class="bi bi-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 product-item" data-category="all liver">
+                    <div class="card shadow-sm rounded-4 overflow-hidden product-card">
+                        <span
+                            class="position-absolute top-0 start-0 m-2 bg-danger text-white px-2 rounded">Mutton</span>
+                        <img src="assets/images/img12.png" class="card-img-top" alt="Mutton Boil">
+                        <div class="card-body text-center">
+                            <h6 class="fw-bold">Mutton Boil</h6>
+                            <p class="small text-muted mb-1">1kg | 5 pieces | serves 4</p>
+                            <p>
+                                <s>₹320</s> <span class="fw-bold text-success">₹272</span>
+                                <span class="badge bg-success ms-1">15% OFF</span>
+                            </p>
+                            <div class="d-flex justify-content-center mb-2">
+                                <button class="btn btn-outline-secondary btn-sm minus-btn">-</button>
+                                <span class="mx-2 quantity">1</span>
+                                <button class="btn btn-outline-secondary btn-sm plus-btn">+</button>
+                            </div>
+                            <button class="btn btn-outline-danger w-100 add-to-cart">
+                                <i class="bi bi-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- custome slider section  -->
+
+    <div id="custom-slider-section">
+        <div class="slider-header">
+            <h2>Fresh, Exclusive & Just for You</h2>
+            <div class="slider-buttons">
+                <button class="arrow-btn" onclick="moveSlide(-1)">←</button>
+                <button class="arrow-btn" onclick="moveSlide(1)">→</button>
+            </div>
+        </div>
+
+        <div class="carousel-container">
+            <div class="carousel-track" id="carouselTrack">
+                <div class="slide">
+                    <div class="slide-content">
+                        <img src="assets/images/an11.png" alt="Cleaned">
+
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-content">
+                        <img src="assets/images/an1.png" alt="Cut and Ready">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-content">
+                        <img src="assets/images/an2.png" alt="Safety Experts">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-content">
+                        <img src="assets/images/an3.png" alt="Never Frozen">
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <div class="slide-content">
+                        <img src="assets/images/an5.png" alt="Cleaned">
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <div class="slide-content">
+                        <img src="assets/images/an11.png" alt="Cleaned">
+
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-content">
+                        <img src="assets/images/an1.png" alt="Cut and Ready">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-content">
+                        <img src="assets/images/an2.png" alt="Safety Experts">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-content">
+                        <img src="assets/images/an3.png" alt="Never Frozen">
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <div class="slide-content">
+                        <img src="assets/images/an5.png" alt="Cleaned">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- small inforamtion section about restaurant  -->
+
+    <section class="py-5" style="background-color:#ffecec; color:#212529;">
+        <div class="container">
+            <div class="row text-center">
+                <!-- Column 1 -->
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="fw-semibold mb-3">We will sell only the meat that we would eat ourselves.</h5>
+                    <p class="fw" style="text-align: left;">
+                        we’re big meat-lovers. And by big, we mean huge. So when it comes to the meat we put on your
+                        plate, we’re extremely picky.
+                        Every single product is handpicked by a team with years of experience.
+                    </p>
+                </div>
+
+                <!-- Column 2 -->
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="fw-semibold mb-3">If it's not fresh, we won’t sell it</h5>
+                    <p style="text-align: left;">
+                        For meat to stay fresh and retain its natural juices, it needs to be stored at a temperature
+                        between 0° and 4°C.
+                        We maintain this temperature from the time we procure the product to cleaning, cutting and
+                        storing it, until it leaves for delivery.
+                        And even when it’s out for delivery, we keep it chilled right up to your doorstep.
+                        Did we mention that we’re obsessed?
+                    </p>
+                </div>
+
+                <!-- Column 3 -->
+                <div class="col-md-4">
+                    <h5 class="fw-semibold mb-3">We will charge only for what you buy</h5>
+                    <p style="text-align: left;">
+                        Doesn’t everyone do this? Not really. Most other places first weigh the meat, then cut up the
+                        pieces, and throw out the parts
+                        which aren’t fit to eat, such as offal, gizzard, wingtips, etc. But you still pay based on the
+                        original weight even though
+                        what you finally get is 10% to 30% less.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- footer start here  -->
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row text-center text-md-start">
+                <!-- Left Section -->
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold">Your Trusted Mutton Shop<br>Now in Your Pocket</h5>
+                    <a href="#">
+                        <img src="assets/images/playstore.png" alt="Google Play" class="img-fluid my-3"
+                            style="max-width: 160px;">
+                    </a>
+                    <h5 class="fw-bold mt-4">Keep In Touch</h5>
+                    <div class="d-flex justify-content-center justify-content-md-start gap-3 mt-3">
+                        <a href="#" class="btn btn-danger rounded-circle">
+                            <i class="bi bi-twitter"></i>
+                        </a>
+                        <a href="#" class="btn btn-danger rounded-circle">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="#" class="btn btn-danger rounded-circle">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="#" class="btn btn-danger rounded-circle">
+                            <i class="bi bi-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Useful Links -->
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold mb-3">Useful Links</h5>
+                    <div class="row">
+                        <div class="col-6">
+                            <p><a href="index.html" class="text-white text-decoration-none">Home</a></p>
+                            <p><a href="about.html" class="text-white text-decoration-none">About</a></p>
+                            <p><a href="shop.html" class="text-white text-decoration-none">Shop</a></p>
+                            <p><a href="FAQ.html" class="text-white text-decoration-none">FAQ</a></p>
+                        </div>
+                        <div class="col-6">
+                            <p><a href="Contact.html" class="text-white text-decoration-none">Contact</a></p>
+                            <p><a href="#" class="text-white text-decoration-none">Terms & Conditions</a></p>
+                            <p><a href="#" class="text-white text-decoration-none">Privacy Policy</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Us -->
+                <div class="col-md-4">
+                    <h5 class="fw-bold mb-3">Contact Us</h5>
+                    <p><strong>Call:</strong> +91 9874563256</p>
+                    <p><strong>Email:</strong> Email@Example.com</p>
+                    <p><strong>Registered Shop Address:</strong></p>
+                    <p class="mb-0">Fresh Cuts Mutton Center Shop</p>
+                    <p class="mb-0">No. 27<br>Ground Floor<br>Shree Market Complex</p>
+                    <p class="mb-0">MG Road<br>Near City Bus Stop<br>Shivaji Nagar</p>
+                    <p class="mb-0">Nagpur</p>
+                    <p>Maharashtra - 411005</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll to Top Button -->
+        <div class="position-fixed bottom-0 end-0 p-4" style="z-index: 1000;">
+            <a href="#" class="btn btn-danger rounded-circle border border-3 border-success">
+                <i class="bi bi-arrow-up text-white"></i>
+            </a>
+        </div>
+    </footer>
+
+
+
+    <!-- footer end here  -->
+
+
+
+
+
+
+    <!-- Login Popup Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 shadow">
+                <div class="modal-header">
+                    <h5 class="modal-title">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label>Email address</label>
+                            <input type="email" class="form-control" placeholder="you@example.com" />
+                        </div>
+                        <div class="mb-3">
+                            <label>Password</label>
+                            <input type="password" class="form-control" placeholder="Password" />
+                        </div>
+                        <button type="submit" class="btn btn-danger w-100">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- sticky button  -->
+    <button id="scrollTopBtn" class="btn btn-danger rounded-circle" style="
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9999;
+    display: none;">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.querySelectorAll(".product-card").forEach(card => {
+            card.addEventListener("click", () => {
+                const product = {
+                    name: card.querySelector("h6").innerText,
+                    price: card.querySelector(".fw-bold.text-success").innerText,
+                    oldPrice: card.querySelector("s")?.innerText || "",
+                    image: card.querySelector("img").src,
+                    desc: "Fresh & tender meat with delicious taste",
+                };
+                localStorage.setItem("selectedProduct", JSON.stringify(product));
+                window.location.href = "product_details.html";
+            });
+        });
+    </script>
+    <script>
+
+        // login form popup 
+
+        document.getElementById("loginBtn").addEventListener("click", function () {
+            var loginModal = new bootstrap.Modal(document.getElementById("loginModal"));
+            loginModal.show();
+        });
+    </script>
+
+    <script>
+        (function () {
+            let index = 0;
+            const track = document.querySelector("#custom-slider-section #carouselTrack");
+            const slides = document.querySelectorAll("#custom-slider-section .slide");
+
+            function moveSlide(step) {
+                const total = slides.length;
+                const slideWidth = slides[0].offsetWidth;
+                const maxIndex = total - Math.floor(window.innerWidth / slideWidth);
+                index += step;
+                if (index < 0) index = 0;
+                if (index > maxIndex) index = maxIndex;
+                track.style.transform = `translateX(-${index * slideWidth}px)`;
+            }
+
+            window.moveSlide = moveSlide; // expose globally
+            window.addEventListener('resize', () => moveSlide(0));
+        })();
+    </script>
+    <script>
+        const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 300) {
+                scrollTopBtn.style.display = "block";
+            } else {
+                scrollTopBtn.style.display = "none";
+            }
+        });
+
+        scrollTopBtn.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

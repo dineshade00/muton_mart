@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Product Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles.css">
+    <style>
+        body {
+            background: #fff;
+        }
+
+        .product-slider .card {
+            min-width: 220px;
+        }
+
+        .product-slider {
+            overflow-x: auto;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .product-slider::-webkit-scrollbar {
+            display: none;
+        }
+
+        .product-detail-img {
+            border-radius: 1rem;
+            overflow: hidden;
+        }
+
+        .price-box s {
+            color: #999;
+            margin-right: 8px;
+        }
+
+        .price-box span {
+            font-size: 1.2rem;
+        }
+
+        .badge {
+            font-size: 0.75rem;
+        }
+
+        .quantity-control button {
+            min-width: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Top Address Bar -->
+    <div class="top-bar d-flex justify-content-between align-items-center">
+        <div>
+            <i class="bi bi-geo-alt-fill"></i>
+            Fresh Cuts Mutton Center Shop No. 27, Ground Floor, Shree Market Complex,
+            MG Road, Near City Bus Stop, Shivaji Nagar, Nagpur, Maharashtra - 411005
+        </div>
+        <div>
+            <i class="bi bi-envelope-fill"></i>
+            Email@Example.com
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top border-bottom shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">MuttonMart</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="FAQ.html">FAQs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <i class="bi bi-person" style="font-size: 18px;" id="loginBtn"></i>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <i class="bi bi-cart" style="font-size: 18px;"></i>
+                        <span class="ms-1" style="color: #d71919; font-weight: 600;">0</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Slider Text -->
+    <div class="slider-text">
+        <span>We currently deliver fresh, high-quality meat products exclusively in Nagpur
+            and surrounding areas. Place your order today and enjoy fast, hygienic
+            doorstep delivery right away.</span>
+    </div>
+
+    <!-- Breadcrumb Section with Background Image -->
+    <section class="py-5" style="
+    background: url('assets/images/product.png') center center/cover no-repeat;
+    position: relative;
+  ">
+        <div style="
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+    "></div>
+        <div class="container position-relative text-white">
+            <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 200px;">
+                <h1 class="fw-bold mb-2">Product Details</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center mb-0">
+                        <li class="breadcrumb-item"><a href="/" class="text-white text-decoration-none">Home</a></li>
+                        <li class="breadcrumb-item active text-white" aria-current="page">Product Details</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="container py-5">
+        <!-- Product Details -->
+        <div class="row">
+            <div class="col-md-5">
+                <img id="productImage" class="img-fluid product-detail-img" src="" alt="">
+            </div>
+            <div class="col-md-7">
+                <h4 id="productName" class="mb-2"></h4>
+                <p class="text-muted small">Fresh & Tender | 1kg | 4 pcs | 3-4 serves</p>
+                <div class="d-flex align-items-center mb-2 price-box">
+                    <s id="oldPrice"></s>
+                    <span id="price" class="fw-bold text-success"></span>
+                    <span class="badge bg-success ms-2">15% OFF</span>
+                </div>
+                <h6>Description:</h6>
+                <p id="desc" class="mb-2"></p>
+                <h6>Nutrition Information:</h6>
+                <ul class="mb-3">
+                    <li>Protein: 22g</li>
+                    <li>Fat: 15g</li>
+                    <li>Carbohydrate: 1g</li>
+                </ul>
+                <div class="d-flex align-items-center mb-3 quantity-control">
+                    <button class="btn btn-outline-secondary btn-sm minus-btn">-</button>
+                    <span class="mx-2 quantity">1</span>
+                    <button class="btn btn-outline-secondary btn-sm plus-btn">+</button>
+                </div>
+                <button class="btn btn-danger">
+                    <i class="bi bi-cart"></i> Add to Cart
+                </button>
+            </div>
+        </div>
+        <!-- You may also like -->
+        <h5 class="mt-5 mb-3">You May Also Like</h5>
+        <div class="product-slider">
+            <div class="card shadow p-2 rounded-4">
+                <img src="assets/images/img1.png" class="card-img-top rounded-4" alt="">
+                <div class="card-body text-center">
+                    <h6 class="fw-bold">Fresh Raw Liver</h6>
+                    <p class="mb-2"><s>₹299</s> <span class="fw-bold text-success">₹255</span></p>
+                    <button class="btn btn-outline-danger btn-sm w-100">Add to Cart</button>
+                </div>
+            </div>
+            <div class="card shadow p-2 rounded-4">
+                <img src="assets/images/img2.png" class="card-img-top rounded-4" alt="">
+                <div class="card-body text-center">
+                    <h6 class="fw-bold">Curry Cut</h6>
+                    <p class="mb-2"><s>₹349</s> <span class="fw-bold text-success">₹299</span></p>
+                    <button class="btn btn-outline-danger btn-sm w-100">Add to Cart</button>
+                </div>
+            </div>
+            <div class="card shadow p-2 rounded-4">
+                <img src="assets/images/img3.png" class="card-img-top rounded-4" alt="">
+                <div class="card-body text-center">
+                    <h6 class="fw-bold">Boneless & Mince</h6>
+                    <p class="mb-2"><s>₹399</s> <span class="fw-bold text-success">₹340</span></p>
+                    <button class="btn btn-outline-danger btn-sm w-100">Add to Cart</button>
+                </div>
+            </div>
+            <div class="card shadow p-2 rounded-4">
+                <img src="assets/images/img4.png" class="card-img-top rounded-4" alt="">
+                <div class="card-body text-center">
+                    <h6 class="fw-bold">Premium Cuts</h6>
+                    <p class="mb-2"><s>₹420</s> <span class="fw-bold text-success">₹360</span></p>
+                    <button class="btn btn-outline-danger btn-sm w-100">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- footer start here  -->
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row text-center text-md-start">
+                <!-- Left Section -->
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold">Your Trusted Mutton Shop<br>Now in Your Pocket</h5>
+                    <a href="#">
+                        <img src="assets/images/playstore.png" alt="Google Play" class="img-fluid my-3"
+                            style="max-width: 160px;">
+                    </a>
+                    <h5 class="fw-bold mt-4">Keep In Touch</h5>
+                    <div class="d-flex justify-content-center justify-content-md-start gap-3 mt-3">
+                        <a href="#" class="btn btn-danger rounded-circle">
+                            <i class="bi bi-twitter"></i>
+                        </a>
+                        <a href="#" class="btn btn-danger rounded-circle">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="#" class="btn btn-danger rounded-circle">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="#" class="btn btn-danger rounded-circle">
+                            <i class="bi bi-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Useful Links -->
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold mb-3">Useful Links</h5>
+                    <div class="row">
+                        <div class="col-6">
+                            <p><a href="index.html" class="text-white text-decoration-none">Home</a></p>
+                            <p><a href="about.html" class="text-white text-decoration-none">About</a></p>
+                            <p><a href="shop.html" class="text-white text-decoration-none">Shop</a></p>
+                            <p><a href="FAQ.html" class="text-white text-decoration-none">FAQ</a></p>
+                        </div>
+                        <div class="col-6">
+                            <p><a href="Contact.html" class="text-white text-decoration-none">Contact</a></p>
+                            <p><a href="#" class="text-white text-decoration-none">Terms & Conditions</a></p>
+                            <p><a href="#" class="text-white text-decoration-none">Privacy Policy</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Us -->
+                <div class="col-md-4">
+                    <h5 class="fw-bold mb-3">Contact Us</h5>
+                    <p><strong>Call:</strong> +91 9874563256</p>
+                    <p><strong>Email:</strong> Email@Example.com</p>
+                    <p><strong>Registered Shop Address:</strong></p>
+                    <p class="mb-0">Fresh Cuts Mutton Center Shop</p>
+                    <p class="mb-0">No. 27<br>Ground Floor<br>Shree Market Complex</p>
+                    <p class="mb-0">MG Road<br>Near City Bus Stop<br>Shivaji Nagar</p>
+                    <p class="mb-0">Nagpur</p>
+                    <p>Maharashtra - 411005</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll to Top Button -->
+        <div class="position-fixed bottom-0 end-0 p-4" style="z-index: 1000;">
+            <a href="#" class="btn btn-danger rounded-circle border border-3 border-success">
+                <i class="bi bi-arrow-up text-white"></i>
+            </a>
+        </div>
+    </footer>
+
+
+
+    <!-- footer end here  -->
+
+
+
+
+    <!-- Login Popup Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 shadow">
+                <div class="modal-header">
+                    <h5 class="modal-title">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label>Email address</label>
+                            <input type="email" class="form-control" placeholder="you@example.com" />
+                        </div>
+                        <div class="mb-3">
+                            <label>Password</label>
+                            <input type="password" class="form-control" placeholder="Password" />
+                        </div>
+                        <button type="submit" class="btn btn-danger w-100">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const product = JSON.parse(localStorage.getItem("selectedProduct"));
+        if (product) {
+            document.getElementById("productImage").src = product.image;
+            document.getElementById("productName").textContent = product.name;
+            document.getElementById("price").textContent = product.price;
+            document.getElementById("oldPrice").textContent = product.oldPrice;
+            document.getElementById("desc").textContent = product.desc;
+        }
+    </script>
+    <script>
+
+        // login form popup 
+
+        document.getElementById("loginBtn").addEventListener("click", function () {
+            var loginModal = new bootstrap.Modal(document.getElementById("loginModal"));
+            loginModal.show();
+        });
+    </script>
+</body>
+
+</html>

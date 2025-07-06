@@ -1,0 +1,246 @@
+  /* Top Address Bar */
+  .top-bar {
+      background-color: #d71919;
+      color: #fff;
+      font-size: 13px;
+      padding: 4px 10px;
+  }
+
+  .navbar-brand {
+      color: #d71919 !important;
+      font-weight: 700;
+      font-size: 32px;
+      margin-left: 20px;
+  }
+
+  .navbar {
+      padding-top: 10px;
+      padding-bottom: 10px;
+  }
+
+  .navbar-nav .nav-link {
+      color: #000 !important;
+      font-weight: 500;
+      margin-right: 15px;
+  }
+
+  .slider-text {
+      background-color: #d71919;
+      color: #fff;
+      font-weight: bold;
+      text-align: center;
+      font-size: 15px;
+      padding: 5px 10px;
+      overflow: hidden;
+      position: relative;
+      height: 30px;
+  }
+
+  .slider-text span {
+      position: absolute;
+      white-space: nowrap;
+      will-change: transform;
+      animation: slide-left 25s linear infinite;
+  }
+
+  @keyframes slide-left {
+      0% {
+          transform: translateX(100%);
+      }
+
+      100% {
+          transform: translateX(-100%);
+      }
+  }
+
+
+  /* hero section css  */
+  .hero-slider {
+      position: relative;
+  }
+
+  .hero-slider .carousel-inner,
+  .hero-slider .carousel-item {
+      height: 300px;
+      /* slightly smaller height */
+  }
+
+  .hero-slider .slider-img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+  }
+
+  .hero-slider .dark-layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.2);
+      /* lighter dark overlay */
+  }
+
+  .hero-slider .custom-control {
+      width: 45px;
+      height: 45px;
+      background-color: white;
+      border: 2px solid #d80000;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: 50%;
+      transform: translateY(-50%);
+  }
+
+  .hero-slider .custom-control span {
+      color: #d80000;
+      font-size: 22px;
+  }
+
+  .hero-slider .carousel-control-prev {
+      left: 10px;
+  }
+
+  .hero-slider .carousel-control-next {
+      right: 10px;
+  }
+
+
+  /* product css  */
+  .product-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .product-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .card-img-top {
+      height: 200px;
+      object-fit: cover;
+  }
+
+  .filter-btn.active {
+      background: #dc3545;
+      color: #fff;
+  }
+
+  .product-card img {
+      transition: transform 0.3s ease;
+  }
+
+  .product-card:hover img {
+      transform: scale(1.05);
+  }
+
+
+  /* custom slider css  */
+  #custom-slider-section {
+      padding: 40px 20px;
+      background: #f9faf9;
+      font-family: 'Segoe UI', sans-serif;
+  }
+
+  #custom-slider-section .slider-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto 30px auto;
+      flex-wrap: wrap;
+      gap: 10px;
+  }
+
+  #custom-slider-section h2 {
+      font-size: 28px;
+      color: #2c3e50;
+      margin: 0;
+  }
+
+  #custom-slider-section .slider-buttons {
+      display: flex;
+      gap: 10px;
+  }
+
+  #custom-slider-section .arrow-btn {
+      background: white;
+      border: 1px solid #ffc107;
+      border-radius: 50px;
+      padding: 10px 14px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background 0.3s;
+  }
+
+  #custom-slider-section .arrow-btn:hover {
+      background: #ffe082;
+  }
+
+  #custom-slider-section .carousel-container {
+      overflow: hidden;
+      max-width: 1200px;
+      margin: 0 auto;
+  }
+
+  #custom-slider-section .carousel-track {
+      display: flex;
+      transition: transform 0.4s ease;
+  }
+
+  #custom-slider-section .slide {
+      flex: 0 0 100%;
+      padding: 20px;
+      max-width: 100%;
+  }
+
+  @media (min-width: 768px) {
+      #custom-slider-section .slide {
+          flex: 0 0 50%;
+      }
+  }
+
+  @media (min-width: 1024px) {
+      #custom-slider-section .slide {
+          flex: 0 0 25%;
+      }
+  }
+
+  #custom-slider-section .slide-content {
+      background: dark;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+  }
+
+  #custom-slider-section .slide-content img {
+      height: 140px;
+      margin-bottom: 15px;
+  }
+
+  #custom-slider-section .slide-content p {
+      font-size: 18px;
+      font-weight: 500;
+      color: #444;
+      text-align: center;
+  }
+
+  #custom-slider-section .slide-content img {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+#custom-slider-section .slide-content img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+
+
+
